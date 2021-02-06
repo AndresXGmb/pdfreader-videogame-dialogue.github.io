@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    background-color: #000000;
+    background-position:bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: animatedBackground 30s ease-in-out  infinite ;
+}
+
+button:focus {
+    outline: none;
+}
+
+.showPanel {
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: rgb(255, 236, 195);
+    background-color: rgb(26, 16, 2);
+    border: 5px solid transparent;
+    border-image: url(border.png) 50% stretch ;
+    border-image-slice: 35;
+    transition: 0.3s all ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    height: 20px;
+    width: 20px;
+    background-image: url(settings-icon.png);
+    background-size: cover;
+    background-position: center;
+}
+.showPanel:hover {
+    cursor: pointer;
+    background-color: rgb(112, 78, 26);
+    outline: none;
+}
+
+.panel {
+    position: absolute;
+    top: 0;
+    left: -395;
+    height: 100vh;
+    width: 400px;
+    background: rgba(0,0,0,1);
+    z-index: 1;
+    border: 5px solid transparent;
+    border-image: url(border.png) 50% stretch ;
+    border-image-slice: 35;
+    color: rgb(255, 236, 195);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: 0.3s all ease;
+}
+.panel h2 {
+    margin: 10px;
+}
+
+.panel .item {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.panel input {
+    margin-left: 10px;
+}
+.pdfloader {
+    position: fixed;
+    top: 30%;
+    margin-left: 20%;
+    z-index: 1;
+    height: 40vh;
+    width: 60vw;
+    border: 5px solid transparent;
+    border-image: url(border.png) 50% stretch ;
+    border-image-slice: 35;
+    background-color: rgba(0,0,0,0.9);
+    color: rgb(255, 236, 195);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+@keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    50% { background-position: 50% 0; }
+    100% { background-position: 0 0; }
+}
+
+.book-title {
+    margin: 20px;
+    padding: 15px 20px;
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+    max-width: 80vw;
+}
+.book-title h1 {
+    font-weight: lighter;
+    letter-spacing: 8px;
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
+.typing-box {
+    overflow: visible;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 30px;
+    width: 80vw;
+    background-color: rgba(0,0,0,0.9);
+    border: 5px solid transparent;
+    border-image: url(border.png) 50% stretch ;
+    border-image-slice: 35;
+    font-size: 18px;
+}
+
+#page {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    border: 2px solid rgb(128, 81, 11);
+    color: rgb(255, 236, 195);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.typing-box p {
+    min-height: 50px;
+    font-size: 1.5em;
+    margin: 10px;
+    color:rgb(233, 215, 181);
+}
+.typing-box .character {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    height: 25px;
+    width: 110px;
+    border: 2px solid transparent;
+    padding: 40px;
+    border-image: url(border.png) 30% stretch ;
+    border-image-slice: 30;
+    background-color:rgb(12, 8, 0);
+    padding: 0;
+    font-size: 12px;
+    margin: 0;
+}
+.character p {
+    padding: 5px;
+    margin-top: -5px;
+}
+.buttonsection {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#nextbutton {
+    margin: 10px;
+    border: 2px solid #423a23;
+    background-color: #caba88;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+@media only screen and (min-width: 1100px) {
+    body {
+        background-size: 105vw;
+    }
+}
+

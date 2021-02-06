@@ -1,0 +1,44 @@
+<DocumentType html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>BookNarrator</title>
+    <link rel="stylesheet" href="styles.css"></link>
+</head>
+<body>
+    <div class="pdfloader">
+        <h2>Select your pdf file.</h2>
+        <input id="inputpdf" type="file" accept="application/pdf"></input>
+    </div>
+    <button class="showPanel" onclick="showPanel()"><div class="icon"></div></button>
+    <div class="panel">
+        <h2>Settings</h2>
+        <div class="item">
+            <label>Background:</label>
+            <input id="inputimg" type="file" accept="image/*"></input>
+        </div>
+        <div class="item">
+            <label>Page:</label>
+            <input type="number" id="inputpage" style="visibility: hidden;">
+        </div>
+    </div>
+    <div id="page">0</div>
+    <div class="container">
+            <div class="book-title">
+                <h1 contenteditable="true"></h1>
+            </div>
+        <div class="typing-box">
+            <div class="character"><p contenteditable="true">Narrator</p></div>
+            <p id="typingtext">To read the next sentence press x or right arrow.</p>
+            <div class="buttonsection">
+                <!--<button id="nextbutton" onclick="buttonClick()"></button>-->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.5.207/build/pdf.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
+</body>
+</html>
+</DocumentType>
